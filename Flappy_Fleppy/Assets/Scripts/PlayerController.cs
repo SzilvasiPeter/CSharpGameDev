@@ -25,6 +25,12 @@ public class PlayerController : MonoBehaviour {
     	rBody.AddForce(Vector2.right * 20 * Time.deltaTime);
     }
 
+    void OnCollisionEnter2D(Collision2D collision){
+    	if(collision.gameObject.tag == "Danger"){
+    		Destroy(rBody);
+    	}
+    }
+
     // Called before Start() function
     /*void Awake() {
 
