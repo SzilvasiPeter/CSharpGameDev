@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Rigidbody2D rBody;
 	
 	// Update is called once per frame
 	void Update () {
-        print("working");
+        //print("working");
+        PlayerInput();
+        PlayerMovoment();
 	}
+
+    void PlayerInput()
+    {
+        if(Input.GetKey(KeyCode.Space))
+        {
+            rBody.AddForce(Vector2.up * 50);
+        }
+    }
+
+    void PlayerMovoment(){
+    	rBody.AddForce(Vector2.right * 20 * Time.deltaTime);
+    }
 
     // Called before Start() function
     /*void Awake() {
