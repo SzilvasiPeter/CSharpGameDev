@@ -5,12 +5,24 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public Rigidbody2D rBody;
+
+    public TextBehavior textScript;
+
+    public bool playerDeath = false;
+
+    void Start(){
+        rBody.bodyType = RigidbodyType2D.Kinematic;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        if(textScript.gameBegan == true){
+            rBody.bodyType = RigidbodyType2D.Dynamic;
+            PlayerInput();
+            PlayerMovoment();
+        }
         //print("working");
-        PlayerInput();
-        PlayerMovoment();
+        
 	}
 
     void PlayerInput()
@@ -27,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision){
     	if(collision.gameObject.tag == "Danger"){
+            playerDeath = true;
     		Destroy(rBody);
     	}
     }

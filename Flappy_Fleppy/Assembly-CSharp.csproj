@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\TextBehavior.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/szilv/Documents/CSharGameDev/Flappy_Fleppy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
