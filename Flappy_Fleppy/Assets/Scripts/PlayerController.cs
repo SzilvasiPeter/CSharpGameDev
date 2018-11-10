@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public Rigidbody2D rBody;
-
+    public ButtonHandler buttonAction;
     public TextBehavior textScript;
-
     public bool playerDeath = false;
+    public bool playerWin = false;
 
     void Start(){
         rBody.bodyType = RigidbodyType2D.Kinematic;
@@ -16,12 +16,15 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(textScript.gameBegan == true){
+        if(buttonAction.startGame == true){
             rBody.bodyType = RigidbodyType2D.Dynamic;
             PlayerInput();
             PlayerMovoment();
         }
-        //print("working");
+
+        if(playerWin == true){
+            rBody.bodyType = RigidbodyType2D.Kinematic;
+        }
         
 	}
 
@@ -34,14 +37,16 @@ public class PlayerController : MonoBehaviour {
     }
 
     void PlayerMovoment(){
-    	rBody.AddForce(Vector2.right * 20 * Time.deltaTime);
+    	rBody.AddForce(Vector2.right * 40 * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision){
     	if(collision.gameObject.tag == "Danger"){
             playerDeath = true;
     		Destroy(rBody);
-    	}
+    	} else if(collision.gameObject.tag == "Victory"){
+            playerWin = true;
+        }
     }
 
     // Called before Start() function
