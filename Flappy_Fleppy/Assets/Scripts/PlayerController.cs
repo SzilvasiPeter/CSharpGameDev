@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public TextBehavior textScript;
     public bool playerDeath = false;
     public bool playerWin = false;
+    public float scrollSpeed = 1.5f;
 
     void Start(){
         rBody.bodyType = RigidbodyType2D.Kinematic;
@@ -43,7 +44,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void PlayerMovoment(){
-    	rBody.AddForce(Vector2.right * 40 * Time.deltaTime);
+    	rBody.AddForce(Vector2.right * 300 * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision){
