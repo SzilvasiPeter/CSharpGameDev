@@ -1,15 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
+
+    public static PlayerController instance;
 
     public Rigidbody2D rBody;
     public ButtonHandler buttonAction;
     public TextBehavior textScript;
     public bool playerDeath = false;
     public bool playerWin = false;
-    public float scrollSpeed = 1.5f;
+    public bool isGameOver = false;
+    public float scrollSpeed = -1.5f;
+    public int score = 0;
+
+    public Text scoreText;
+    public GameObject gameOverText;
 
     void Start(){
         rBody.bodyType = RigidbodyType2D.Kinematic;
@@ -26,8 +35,27 @@ public class PlayerController : MonoBehaviour {
         if(playerWin == true){
             rBody.bodyType = RigidbodyType2D.Kinematic;
         }
+
+        if((playerDeath == true || playerWin == true) && Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         
 	}
+
+    public void Score()
+    {
+        if(playerDeath == true || playerWin == true) { return; }
+
+        score++;
+        scoreText.text = "Score: " + score;
+    }
+
+    public void Die()
+    {
+        isGameOver = true;
+        gameOverText.SetActive(true);
+    }
 
     void PlayerInput()
     {
@@ -57,7 +85,15 @@ public class PlayerController : MonoBehaviour {
     }
 
     // Called before Start() function
-    /*void Awake() {
-
-    }*/
+    void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

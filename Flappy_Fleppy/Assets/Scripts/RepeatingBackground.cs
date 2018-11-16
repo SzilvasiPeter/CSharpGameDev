@@ -17,8 +17,6 @@ public class RepeatingBackground : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        print((float)transform.position.x);
-        print((float)backgroundHorizontalLength);
 
 		if(transform.position.x < -backgroundHorizontalLength)
         {
@@ -28,7 +26,7 @@ public class RepeatingBackground : MonoBehaviour {
 
     private void RepositionBackground()
     {
-        Vector2 backgroundOffset = new Vector2(backgroundHorizontalLength * 2.0f, 0);
+        Vector2 backgroundOffset = new Vector2(backgroundHorizontalLength * 2, 0);
         transform.position = (Vector2)transform.position + backgroundOffset;
     }
 }
