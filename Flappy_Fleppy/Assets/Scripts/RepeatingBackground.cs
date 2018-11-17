@@ -11,7 +11,7 @@ public class RepeatingBackground : MonoBehaviour {
 	void Start ()
     {
         backgroundCollider = GetComponent<BoxCollider2D>();
-        backgroundHorizontalLength = backgroundCollider.size.x * 2.0f;
+        backgroundHorizontalLength = backgroundCollider.size.x * 3.0f;
 	}
 	
 	// Update is called once per frame
@@ -26,7 +26,7 @@ public class RepeatingBackground : MonoBehaviour {
 
     private void RepositionBackground()
     {
-        Vector2 backgroundOffset = new Vector2(backgroundHorizontalLength * 2.0f, 0);
+        Vector2 backgroundOffset = new Vector2(backgroundHorizontalLength * 3.0f, 0);
         transform.position = (Vector2)transform.position + backgroundOffset;
     }
 }

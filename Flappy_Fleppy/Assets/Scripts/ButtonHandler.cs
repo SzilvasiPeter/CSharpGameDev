@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ButtonHandler : MonoBehaviour {
 
+    public static ButtonHandler instance;
+
 	public Button startButton;
 	public Button restartButton;
 	public bool startGame = false;

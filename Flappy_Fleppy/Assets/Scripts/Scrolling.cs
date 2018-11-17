@@ -5,18 +5,24 @@ using UnityEngine;
 public class Scrolling : MonoBehaviour {
 
     private Rigidbody2D rb2d;
+    public ButtonHandler buttonAction;
+    public PlayerController player;
 
 	// Use this for initialization
 	void Start ()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = new Vector2(PlayerController.instance.scrollSpeed, 0);
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if(PlayerController.instance.isGameOver)
+        if (buttonAction.startGame == true)
+        {
+            rb2d.velocity = new Vector2(player.scrollSpeed, 0);
+        }
+
+        if (player.playerDeath == true)
         {
             rb2d.velocity = Vector2.zero;
         }

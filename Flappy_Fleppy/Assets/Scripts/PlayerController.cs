@@ -6,15 +6,13 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-    public static PlayerController instance;
-
     public Rigidbody2D rBody;
     public ButtonHandler buttonAction;
     public TextBehavior textScript;
     public bool playerDeath = false;
     public bool playerWin = false;
     public bool isGameOver = false;
-    public float scrollSpeed = -3.0f;
+    public float scrollSpeed = -5.0f;
     public int score = 0;
 
     public Text scoreText;
@@ -38,7 +36,9 @@ public class PlayerController : MonoBehaviour {
 
         if((playerDeath == true || playerWin == true) && Input.GetMouseButtonDown(0))
         {
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Destroy(gameObject);
         }
         
 	}
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void PlayerMovoment(){
-    	rBody.AddForce(Vector2.right * 300 * Time.deltaTime);
+    	rBody.AddForce(Vector2.right * 0 * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision){
@@ -85,15 +85,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     // Called before Start() function
-    void Awake()
+    /*void Awake()
     {
-        if(instance == null)
-        {
-            instance = this;
-        }
-        else if(instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+        
+    }*/
 }
