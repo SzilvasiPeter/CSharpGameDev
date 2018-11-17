@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
     public bool playerDeath = false;
     public bool playerWin = false;
     public bool isGameOver = false;
-    public float scrollSpeed = -1.5f;
+    public float scrollSpeed = -3.0f;
     public int score = 0;
 
     public Text scoreText;
