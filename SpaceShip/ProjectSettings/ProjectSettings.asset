@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 76d20a78ed894db42bcfece72f813594
+  productGUID: 854aeec0e680cb347b01cd14ee3d4450
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -619,8 +619,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 9be1d87f-2987-46f0-bf8a-f73dff8da260
-  projectName: SpaceShip
+  cloudProjectId: 7cbfb7fc-c2c7-4999-91d9-e157ade1a35d
+  projectName: SpaceShip (1)
   organizationId: unity_uthr_joiixltia
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
