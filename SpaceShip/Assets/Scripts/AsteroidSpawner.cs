@@ -31,7 +31,11 @@ public class AsteroidSpawner : MonoBehaviour {
         time = 0;
         int i = Random.Range(0, asteroidSpawns.Length);
         GameObject asterClone = Instantiate(asteroidSpawns[i]);
-        asterClone.transform.position = Random.insideUnitCircle * 5;
+        //asterClone.transform.position = Random.insideUnitCircle * 36;
+        float angle = Random.Range(0f, 360f);
+        float dist = Random.Range(1.2f, 3f);
+        asterClone.transform.Rotate(0, 0, angle);
+        asterClone.transform.Translate(dist, dist, 0);
         Vector3 zTransform = new Vector3(0.0f, 0.0f, -1.0f);
         asterClone.transform.position += zTransform;
     }
