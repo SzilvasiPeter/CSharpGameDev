@@ -6,11 +6,16 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody2D rbody;
 
+    public List<GameObject> lives;
+
     //[SerializeField]
     //private ParticleSystem flares;
 
     [SerializeField]
     private GameObject fireball;
+
+    [SerializeField]
+    private GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -29,10 +34,17 @@ public class PlayerController : MonoBehaviour {
             rbody.AddForce(this.transform.up * -1.5f);
         } else if (turnLeft)
         {
-            rbody.AddTorque(500);
+            rbody.AddTorque(125);
         } else if (turnRight)
         {
-            rbody.AddTorque(-500);
+            rbody.AddTorque(-125);
+        }
+
+        if(lives.Count == 0)
+        {
+            Destroy(this.gameObject);
+            GameObject explosionClone = Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
+            Destroy(explosionClone, 1.0f);
         }
     }
 
@@ -46,6 +58,15 @@ public class PlayerController : MonoBehaviour {
             laserClone.GetComponent<Rigidbody2D>().AddForce(this.transform.up * -700);
 
             Destroy(laserClone, 2.0f);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "asteroid")
+        {
+            Destroy(lives[0].gameObject);
+            lives.Remove(lives[0]);
         }
     }
 }

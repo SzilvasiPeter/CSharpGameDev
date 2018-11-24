@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212806340253654466}
   - component: {fileID: 50468489860648804}
   - component: {fileID: 70786507966511986}
+  - component: {fileID: 114272331406012774}
   m_Layer: 0
   m_Name: fireball-red-tail-med
-  m_TagString: Untagged
+  m_TagString: laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,6 +78,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0011642464, y: 0.03725128}
   m_Size: {x: 0.07, y: 0.16}
   m_Direction: 0
+--- !u!114 &114272331406012774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133332569294446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5656cc598d74474aa6cfa0a11231fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1950284619690502, guid: e303f9168fc324d4089a32d3d23e4c0a, type: 2}
 --- !u!212 &212806340253654466
 SpriteRenderer:
   m_ObjectHideFlags: 1
