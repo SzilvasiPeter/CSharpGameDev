@@ -36,8 +36,8 @@ public class AsteroidSpawner : MonoBehaviour {
         float dist = Random.Range(1.2f, 3f);
         asterClone.transform.Rotate(0, 0, angle);
         asterClone.transform.Translate(dist, dist, 0);
-        Vector3 zTransform = new Vector3(0.0f, 0.0f, -1.0f);
-        asterClone.transform.position += zTransform;
+        //Vector3 zTransform = new Vector3(0.0f, 0.0f, -1.0f);
+        //asterClone.transform.position += zTransform;
     }
 
     void SetRandomTime()
