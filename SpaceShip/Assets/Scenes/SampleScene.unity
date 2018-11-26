@@ -1155,6 +1155,9 @@ MonoBehaviour:
   - {fileID: 1448269213}
   fireball: {fileID: 1133332569294446, guid: 31ed177a2744d2c4a819b844af5cb80c, type: 2}
   explosion: {fileID: 1950284619690502, guid: e303f9168fc324d4089a32d3d23e4c0a, type: 2}
+  sprite1: {fileID: 21300006, guid: 8aeb9e233fbb8f14db39770841b78b94, type: 3}
+  sprite2: {fileID: 21300000, guid: 6ec8d01a89dc4a24796016a3e06c0562, type: 3}
+  sprite3: {fileID: 21300000, guid: ffc6453dd73d74c4ca65dcdafd38c647, type: 3}
 --- !u!61 &1821566539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1202,7 +1205,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1928394184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: -0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1821566536}

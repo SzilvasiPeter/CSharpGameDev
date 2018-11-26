@@ -17,27 +17,44 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private GameObject explosion;
 
-	// Use this for initialization
-	void Start () {
+    public Sprite sprite1;
+    public Sprite sprite2;
+    public Sprite sprite3;
+
+    private SpriteRenderer spriteRenderer;
+
+    // Use this for initialization
+    void Start () {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.sprite == null)
+            spriteRenderer.sprite = sprite1;
+
         rbody = this.gameObject.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        ChangeTheDamnSprite();
         fireLaser();
         bool goForward = Input.GetKey(KeyCode.W);
+        bool slowDown = Input.GetKey(KeyCode.S);
         bool turnLeft = Input.GetKey(KeyCode.A);
         bool turnRight = Input.GetKey(KeyCode.D);
 
-        if (goForward)
+        if (slowDown)
         {
             rbody.AddForce(this.transform.up * -1.5f);
-        } else if (turnLeft)
+        }
+        else if (goForward)
         {
-            rbody.AddTorque(125);
+            rbody.AddForce(this.transform.up * 0.8f);
+        }
+        else if (turnLeft)
+        {
+            rbody.AddTorque(50);
         } else if (turnRight)
         {
-            rbody.AddTorque(-125);
+            rbody.AddTorque(-50);
         }
 
         if(lives.Count == 0)
@@ -55,7 +72,7 @@ public class PlayerController : MonoBehaviour {
             Transform spawnArea = gameObject.transform.GetChild(0).transform;
             GameObject laserClone = Instantiate(fireball, spawnArea.position, spawnArea.rotation);
 
-            laserClone.GetComponent<Rigidbody2D>().AddForce(this.transform.up * -700);
+            laserClone.GetComponent<Rigidbody2D>().AddForce(this.transform.up * 700);
 
             Destroy(laserClone, 2.0f);
         }
@@ -67,6 +84,18 @@ public class PlayerController : MonoBehaviour {
         {
             Destroy(lives[0].gameObject);
             lives.Remove(lives[0]);
+        }
+    }
+
+    void ChangeTheDamnSprite()
+    {
+        if (lives.Count == 2)
+        {
+            spriteRenderer.sprite = sprite2;
+        }
+        else if(lives.Count == 1)
+        {
+            spriteRenderer.sprite = sprite3;
         }
     }
 }
