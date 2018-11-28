@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private GameObject explosion;
 
+    [SerializeField]
+    private AudioSource laserSound;
+
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
@@ -69,6 +72,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            laserSound.Play();
             Transform spawnArea = gameObject.transform.GetChild(0).transform;
             GameObject laserClone = Instantiate(fireball, spawnArea.position, spawnArea.rotation);
 
