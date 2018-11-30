@@ -1,20 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CircularMovement : MonoBehaviour {
 
-    //private float rotateSpeed = 0.3f;
-    //private float radius = -30.0f;
     private float radius;
     private float rotateSpeed;
+    private double randomRange;
 
     private Transform sun;
     private Vector3 center;
     private float angle;
 
-	// Use this for initialization
-	void Start () {
+    //Function to get a random number 
+    private static readonly System.Random random = new System.Random();
+    private static readonly object syncLock = new object();
+    public static int RandomNumber(int min, int max)
+    {
+        lock (syncLock)
+        { // synchronize
+            return random.Next(min, max);
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         sun = GameObject.Find("Sun").transform;
         center = sun.position;
 
@@ -25,7 +36,10 @@ public class CircularMovement : MonoBehaviour {
         // Distance is exponentially slow down the rotation
         rotateSpeed = 50 / (radius * radius);
         print(rotateSpeed);
-	}
+
+        randomRange = RandomNumber(-1, 1);
+        Console.WriteLine(randomRange);
+    }
 	
 	// Update is called once per frame
 	void Update () {
