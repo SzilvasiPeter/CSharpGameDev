@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62576610}
   - component: {fileID: 62576611}
+  - component: {fileID: 62576612}
   m_Layer: 0
   m_Name: SandPlanet
   m_TagString: Untagged
@@ -188,6 +189,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &62576612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 62576609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc55ec556a2ce9498d0a3471a6be121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &111639572
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 438674644}
   - component: {fileID: 438674645}
+  - component: {fileID: 438674646}
   m_Layer: 0
   m_Name: StormPlanet
   m_TagString: Untagged
@@ -670,6 +683,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &438674646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438674643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc55ec556a2ce9498d0a3471a6be121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540751263}
   - component: {fileID: 1540751264}
+  - component: {fileID: 1540751265}
   m_Layer: 0
   m_Name: RedPlanet
   m_TagString: Untagged
@@ -1150,6 +1175,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1540751265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540751262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc55ec556a2ce9498d0a3471a6be121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1725910031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725910032}
   - component: {fileID: 1725910033}
+  - component: {fileID: 1725910034}
   m_Layer: 0
   m_Name: LavaPlanet
   m_TagString: Untagged
@@ -1225,6 +1262,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1725910034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725910031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc55ec556a2ce9498d0a3471a6be121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1821566534
 GameObject:
   m_ObjectHideFlags: 0
