@@ -14,12 +14,14 @@ public class PlayerController : MonoBehaviour {
     public bool isGameOver = false;
     public float scrollSpeed = -5.0f;
     public int score = 0;
+    private float heldTime = 0.0f;
 
     public Text scoreText;
     public GameObject gameOverText;
 
     void Start(){
         rBody.bodyType = RigidbodyType2D.Kinematic;
+        score = 0;
     }
 	
 	// Update is called once per frame
@@ -28,6 +30,13 @@ public class PlayerController : MonoBehaviour {
             rBody.bodyType = RigidbodyType2D.Dynamic;
             PlayerInput();
             PlayerMovoment();
+            heldTime += Time.deltaTime;
+            if (heldTime >= 1)
+            {
+                score += (int)heldTime;
+                scoreText.text = "Score: " + score;
+                heldTime -= (int)heldTime;
+            }
         }
 
         if(playerWin == true){
@@ -40,16 +49,13 @@ public class PlayerController : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Destroy(gameObject);
         }
+
+        if(Time.deltaTime % 10.0f == 0)
+        {
+            score++;
+        }
         
 	}
-
-    public void Score()
-    {
-        if(playerDeath == true || playerWin == true) { return; }
-
-        score++;
-        scoreText.text = "Score: " + score;
-    }
 
     public void Die()
     {

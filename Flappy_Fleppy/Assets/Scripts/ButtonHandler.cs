@@ -19,7 +19,7 @@ public class ButtonHandler : MonoBehaviour {
 		sButton.onClick.AddListener(StartGame);
 
 		Button rButton = restartButton.GetComponent<Button>();
-		rButton.onClick.AddListener(Restart);
+        rButton.onClick.AddListener(Restart);
 	}
 	
 	void StartGame(){

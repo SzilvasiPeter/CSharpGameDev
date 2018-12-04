@@ -10,9 +10,9 @@ public class TextBehavior : MonoBehaviour {
 	public PlayerController player;
 	public GameObject startButton;
 	public GameObject restartButton;
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		if(buttonAction.startGame == true){
 			PlayerStatus();
 		}
