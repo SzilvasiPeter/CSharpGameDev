@@ -36,12 +36,12 @@ public class ColumnSpawner : MonoBehaviour {
         float i = UnityEngine.Random.Range(-4.0f, 4.0f);
 
         //pos.position = new Vector3(13.0f + spacing, -9.0f + i, -3.0f);
-        //Vector3 posb = new Vector3(13.0f + spacing, -9.0f + i, -3.0f);
-        Instantiate(columnBottomSpawns, posb, false);
+        Vector3 posb = new Vector3(13.0f + spacing, -9.0f + i, -3.0f);
+        Instantiate(columnBottomSpawns, posb, Quaternion.identity);
+
         //pos.position = new Vector3(13.0f + spacing, 13.0f + i, -3.0f);
-        //Vector3 post = new Vector3(13.0f + spacing, -9.0f + i, -3.0f);
-        Transform pos = post;
-        Instantiate(columnTopSpawns, post, false);
+        Vector3 post = new Vector3(13.0f + spacing, 13.0f + i, -3.0f);
+        Instantiate(columnTopSpawns, post, Quaternion.identity);
         currentTime = 0;
     }
 }
