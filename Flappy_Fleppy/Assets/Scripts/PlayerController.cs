@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
     public int score = 0;
     private float heldTime = 0.0f;
 
+    public static PlayerController instance;
+
     public Text scoreText;
     public GameObject gameOverText;
 
@@ -50,7 +52,7 @@ public class PlayerController : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        if(Time.deltaTime % 10.0f == 0)
+        if(Time.deltaTime % 50.0f == 0)
         {
             score++;
         }
@@ -78,7 +80,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void PlayerMovoment(){
-    	rBody.AddForce(Vector2.right * 0 * Time.deltaTime);
+    	rBody.AddForce(Vector2.right * 10.0f * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision){

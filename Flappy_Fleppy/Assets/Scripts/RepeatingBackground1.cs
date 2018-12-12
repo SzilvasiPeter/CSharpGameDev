@@ -6,6 +6,7 @@ public class RepeatingBackground1 : MonoBehaviour {
 
     private BoxCollider2D backgroundCollider;
     private float backgroundHorizontalLength;
+    //public Transform playerPos;
 
 	// Use this for initialization
 	void Start ()
@@ -18,7 +19,7 @@ public class RepeatingBackground1 : MonoBehaviour {
 	void Update ()
     {
 
-		if(transform.position.x < -backgroundHorizontalLength)
+		if(transform.position.x < -backgroundHorizontalLength / 1.8f)
         {
             RepositionBackground();
         }
