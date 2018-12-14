@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 492}
   m_MaxSize: {x: 16012, y: 14042}
   vertical: 0
-  controlID: 33
+  controlID: 61
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,7 +195,7 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 685
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &9
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 492}
   m_MaxSize: {x: 12010, y: 14042}
   vertical: 1
-  controlID: 34
+  controlID: 62
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 221}
   m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
-  controlID: 35
+  controlID: 63
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -379,20 +379,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/Drones
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts/Drones
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\szilv\Documents\CSharGameDev\Shooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e2b0000
-    m_LastClickedID: 11086
-    m_ExpandedIDs: 00000000ec290000002a00000e2b0000842b0000862b0000182d00001e2d0000b22e0000b82e000000ca9a3b
+    m_SelectedIDs: 782c0000
+    m_LastClickedID: 11384
+    m_ExpandedIDs: 00000000ee290000022a0000122b00006e2b00008c2b00008e2b0000782c0000262d00002c2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -420,7 +420,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3eb2ffff
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ec290000002a00000e2b0000842b0000862b00008c2c0000182d00001e2d0000
+    m_ExpandedIDs: 00000000ee290000022a0000122b00006e2b00008c2b00008e2b0000782c0000262d00002c2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -536,23 +536,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7c2d0000
-    m_LastClickedID: 11644
-    m_ExpandedIDs: e4fbffff000000004e2d0000662d00007c2d00009a2d0000b82d00000a2e0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e4fbffff00000000782d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Drone 1
-      m_OriginalName: Drone 1
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11704
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -592,9 +592,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.43530166, y: -0.5798826, z: -8.245871}
+    m_Target: {x: -0.76618654, y: -1.7468963, z: -7.426433}
     speed: 2
-    m_Value: {x: -0.43530166, y: -0.5798826, z: -8.245871}
+    m_Value: {x: -0.76618654, y: -1.7468963, z: -7.426433}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -624,11 +624,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.001982858, y: 0.953882, z: -0.3001093, w: -0.006300907}
     speed: 2
-    m_Value: {x: -0.001982858, y: 0.953882, z: -0.3001093, w: -0.006300907}
+    m_Value: {x: -0.001982858, y: 0.953882, z: -0.3001093, w: -0.0063009067}
   m_Size:
-    m_Target: 13.78697
+    m_Target: 13.060232
     speed: 2
-    m_Value: 13.78697
+    m_Value: 13.060232
   m_Ortho:
     m_Target: 0
     speed: 2

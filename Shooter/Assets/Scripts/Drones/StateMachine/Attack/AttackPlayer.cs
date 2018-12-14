@@ -28,6 +28,7 @@ public class AttackPlayer : MonoBehaviour {
             if(collider.tag == "player")
             {
                 print("Player found");
+                playerDetected = true;
                 Transform playerPos = GameObject.Find("Player").transform;
                 transform.LookAt(playerPos.position);
 
