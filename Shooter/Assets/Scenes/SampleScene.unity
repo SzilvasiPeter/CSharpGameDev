@@ -312,9 +312,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 113972970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4339742ddb41dc41bad51713eec9856, type: 3}
+  m_Script: {fileID: 11500000, guid: 8348b1184e98e674e825d645b9b57873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 1772436380}
 --- !u!4 &139272455
 Transform:
   m_ObjectHideFlags: 0
@@ -880,9 +881,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 317367467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4339742ddb41dc41bad51713eec9856, type: 3}
+  m_Script: {fileID: 11500000, guid: 8348b1184e98e674e825d645b9b57873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 1861517858}
 --- !u!1 &413696211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,6 +1353,18 @@ MonoBehaviour:
   laser: {fileID: 1505840479340412, guid: 58810cde06b53ad448ab787473d7caa8, type: 2}
   timer: 0
   laserSpawn: {fileID: 1945292221}
+--- !u!114 &594385895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 594385891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae32782ec934ab47bb0e0afca51d66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 1203344765}
 --- !u!1 &597113498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +1759,18 @@ MonoBehaviour:
   laser: {fileID: 1505840479340412, guid: 58810cde06b53ad448ab787473d7caa8, type: 2}
   timer: 0
   laserSpawn: {fileID: 1042701794}
+--- !u!114 &877342480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 877342476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae32782ec934ab47bb0e0afca51d66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 438638795}
 --- !u!1 &938629848
 GameObject:
   m_ObjectHideFlags: 0
