@@ -7,10 +7,18 @@ public class PlayerHealth : MonoBehaviour {
 
     public Image playerHealth;
     public Text deathText;
-	
-	// Update is called once per frame
-	void Update () {
-        if (playerHealth.fillAmount <= 0.0f)
+
+    private Timer timeCheck;
+
+    void Start()
+    {
+        timeCheck = GameObject.Find("Timer").GetComponent<Timer>();
+        
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (playerHealth.fillAmount <= 0.0f || timeCheck.timesUp == true)
         {
             GameObject objectSave = gameObject.transform.GetChild(0).gameObject;
             objectSave.transform.parent = null;
