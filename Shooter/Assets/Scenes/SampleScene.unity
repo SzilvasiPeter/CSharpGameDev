@@ -344,7 +344,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 1772436380}
-  isDead: 0
   timer: {fileID: 1911713856}
 --- !u!4 &139272455
 Transform:
@@ -376,8 +375,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 139272455}
-  - component: {fileID: 145082810}
   - component: {fileID: 145082809}
+  - component: {fileID: 145082810}
   m_Layer: 0
   m_Name: WPN_AK
   m_TagString: Untagged
@@ -397,27 +396,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1638041371109910, guid: 7dbbf328dd05ba94f946c1a0491730b6, type: 2}
-  spawnAre: {fileID: 958335258}
+  spawnArea: {fileID: 958335258}
   timer: 0
---- !u!95 &145082810
-Animator:
-  serializedVersion: 3
+  animClip: {fileID: 145082810}
+--- !u!111 &145082810
+Animation:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 9500000, guid: 75dcb58506746b84db987c4ce01e99b5,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145082808}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 75dcb58506746b84db987c4ce01e99b5, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8c00f6c314d36ed44af18760f11884b8, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8c00f6c314d36ed44af18760f11884b8, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +939,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 1861517858}
-  isDead: 0
   timer: {fileID: 1911713856}
 --- !u!1 &413696211
 GameObject:
@@ -1397,7 +1392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 1203344765}
-  isDead: 0
   timer: {fileID: 1911713856}
 --- !u!1 &597113498
 GameObject:
@@ -1805,7 +1799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 438638795}
-  isDead: 0
   timer: {fileID: 1911713856}
 --- !u!1 &938629848
 GameObject:
@@ -3343,6 +3336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timesUp: 0
+  win: 0
   counter: 0
 --- !u!1 &1928212026
 GameObject:
