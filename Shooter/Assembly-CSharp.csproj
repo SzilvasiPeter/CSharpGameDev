@@ -61,10 +61,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BulletCollision.cs" />
+    <Compile Include="Assets\Scripts\Drones\DroneHealth.cs" />
     <Compile Include="Assets\Scripts\Drones\PatrollingHealth\PatrollingDroneHealth.cs" />
     <Compile Include="Assets\Scripts\Drones\StateMachine\Attack\AttackPlayer.cs" />
     <Compile Include="Assets\Scripts\Drones\StateMachine\Patrol\NavAgent.cs" />
-    <Compile Include="Assets\Scripts\Drones\StationaryHealth\DroneStationaryHealth.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\DestructibleObj.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IDestructable.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\ShotController.cs" />
