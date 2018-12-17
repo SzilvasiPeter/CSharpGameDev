@@ -113,6 +113,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 42a9e401342c10e4883d27c8f6293f73, type: 2}
+--- !u!1 &27681775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27681776}
+  m_Layer: 0
+  m_Name: laserSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27681776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 27681775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 317367466}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &30755462
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +331,7 @@ MonoBehaviour:
   playerDetected: 0
   laser: {fileID: 1505840479340412, guid: 58810cde06b53ad448ab787473d7caa8, type: 2}
   timer: 0
-  laserSpawn: {fileID: 447151907}
+  laserSpawn: {fileID: 661998294}
 --- !u!114 &113972976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 1772436380}
+  isDead: 0
+  timer: {fileID: 1911713856}
 --- !u!4 &139272455
 Transform:
   m_ObjectHideFlags: 0
@@ -484,7 +514,7 @@ RectTransform:
   m_Children:
   - {fileID: 1772436379}
   m_Father: {fileID: 113972969}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -577,6 +607,34 @@ Transform:
   - {fileID: 317367466}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &310255473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310255474}
+  m_Layer: 0
+  m_Name: laserSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &310255474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310255473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 594385890}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311498316
 GameObject:
@@ -872,7 +930,7 @@ MonoBehaviour:
   playerDetected: 0
   laser: {fileID: 1505840479340412, guid: 58810cde06b53ad448ab787473d7caa8, type: 2}
   timer: 0
-  laserSpawn: {fileID: 615809027}
+  laserSpawn: {fileID: 27681776}
 --- !u!114 &317367473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,6 +943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 1861517858}
+  isDead: 0
+  timer: {fileID: 1911713856}
 --- !u!1 &413696211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,34 +1090,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438638793}
   m_CullTransparentMesh: 0
---- !u!1 &447151906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 447151907}
-  m_Layer: 0
-  m_Name: laserSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &447151907
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 447151906}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.15, y: 0, z: 1.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 113972969}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1197,7 @@ RectTransform:
   m_Children:
   - {fileID: 438638794}
   m_Father: {fileID: 877342475}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1352,7 +1384,7 @@ MonoBehaviour:
   playerDetected: 0
   laser: {fileID: 1505840479340412, guid: 58810cde06b53ad448ab787473d7caa8, type: 2}
   timer: 0
-  laserSpawn: {fileID: 1945292221}
+  laserSpawn: {fileID: 310255474}
 --- !u!114 &594385895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,6 +1397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 1203344765}
+  isDead: 0
+  timer: {fileID: 1911713856}
 --- !u!1 &597113498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,14 +1475,14 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597113498}
   m_Mesh: {fileID: 4300006, guid: 75dcb58506746b84db987c4ce01e99b5, type: 3}
---- !u!1 &615809026
+--- !u!1 &661998293
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 615809027}
+  - component: {fileID: 661998294}
   m_Layer: 0
   m_Name: laserSpawn
   m_TagString: Untagged
@@ -1456,18 +1490,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &615809027
+--- !u!4 &661998294
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 615809026}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.5, y: 0, z: 1.5}
+  m_GameObject: {fileID: 661998293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 317367466}
-  m_RootOrder: 0
+  m_Father: {fileID: 113972969}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729099190
 GameObject:
@@ -1758,7 +1792,7 @@ MonoBehaviour:
   playerDetected: 0
   laser: {fileID: 1505840479340412, guid: 58810cde06b53ad448ab787473d7caa8, type: 2}
   timer: 0
-  laserSpawn: {fileID: 1042701794}
+  laserSpawn: {fileID: 1443730795}
 --- !u!114 &877342480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,6 +1805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 438638795}
+  isDead: 0
+  timer: {fileID: 1911713856}
 --- !u!1 &938629848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,36 +1920,6 @@ Transform:
   m_Father: {fileID: 139272455}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
---- !u!1 &1042701793
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1157577920932140, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515,
-    type: 2}
-  m_PrefabInternal: {fileID: 1285564196}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1042701794}
-  m_Layer: 0
-  m_Name: laserSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1042701794
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515,
-    type: 2}
-  m_PrefabInternal: {fileID: 1285564196}
-  m_GameObject: {fileID: 1042701793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 877342475}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061560672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,48 +2195,6 @@ Transform:
   m_Father: {fileID: 1971229098}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1285564196
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 877342475}
-    m_Modifications:
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688752431116326, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3bfd1320d7e3b2e43b5f4f6948a5d515, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1317983560
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,6 +2347,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1423406569}
   m_Mesh: {fileID: 4300000, guid: 75dcb58506746b84db987c4ce01e99b5, type: 3}
+--- !u!1 &1443730794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1443730795}
+  m_Layer: 0
+  m_Name: laserSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1443730795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443730794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 877342475}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1505625374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,7 +2481,7 @@ RectTransform:
   m_Children:
   - {fileID: 1203344764}
   m_Father: {fileID: 594385890}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3061,7 +3053,7 @@ RectTransform:
   m_Children:
   - {fileID: 1861517857}
   m_Father: {fileID: 317367466}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3351,12 +3343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timesUp: 0
-  stationaryDrones:
-  - {fileID: 877342480}
-  - {fileID: 594385895}
-  patrollingDrones:
-  - {fileID: 113972976}
-  - {fileID: 317367473}
+  counter: 0
 --- !u!1 &1928212026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,34 +3458,6 @@ Transform:
   - {fileID: 769732097}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1945292220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1945292221}
-  m_Layer: 0
-  m_Name: laserSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1945292221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1945292220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 594385890}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971229097
 GameObject:

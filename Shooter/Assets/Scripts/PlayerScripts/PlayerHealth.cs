@@ -18,6 +18,10 @@ public class PlayerHealth : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (timeCheck.win)
+        {
+            deathText.text = "You won!";
+        }
         if (playerHealth.fillAmount <= 0.0f || timeCheck.timesUp == true)
         {
             GameObject objectSave = gameObject.transform.GetChild(0).gameObject;
