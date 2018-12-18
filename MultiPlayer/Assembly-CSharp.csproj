@@ -61,7 +61,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BulletCollision.cs" />
+    <Compile Include="Assets\Scripts\CustomNetworkManager.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\ZombieCollision.cs" />
+    <Compile Include="Assets\Scripts\ZombieMovoment.cs" />
+    <Compile Include="Assets\Scripts\ZombieSpawner.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/szilv/Documents/CSharGameDev/MultiPlayer/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
