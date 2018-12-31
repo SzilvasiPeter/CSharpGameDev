@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        if(Time.deltaTime % 50.0f == 0)
+        if(Time.deltaTime % 150.0f == 0)
         {
             score++;
         }
