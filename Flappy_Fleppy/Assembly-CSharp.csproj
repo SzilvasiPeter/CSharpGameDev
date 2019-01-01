@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Epic Adventure Orchestral Background Music\audio.cs" />
     <Compile Include="Assets\Flappy Bird Style\Scripts\Bird.cs" />
     <Compile Include="Assets\Flappy Bird Style\Scripts\Column.cs" />
     <Compile Include="Assets\Flappy Bird Style\Scripts\ColumnPool.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Scrolling.cs" />
     <Compile Include="Assets\Scripts\TextBehavior.cs" />
     <None Include="Assets\Flappy Bird Style\_ReadMe.txt" />
+    <None Include="Assets\Epic Adventure Orchestral Background Music\README FIRST.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/szilv/Documents/CSharGameDev/Flappy_Fleppy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
